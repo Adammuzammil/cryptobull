@@ -13,7 +13,6 @@ const CoinPage = () => {
       try {
         const coinData = await fetchCoinData(coinId);
         setCoin(coinData);
-        console.log(coinData);
       } catch (error) {
         console.error(error);
       }
