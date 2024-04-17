@@ -27,13 +27,15 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="rounded-div flex items-center justify-between space-x-4 p-5 font-semibold">
-      <Link to="/">
-        <h1 className="text-xl font-bold">Cryptobull</h1>
-      </Link>
-      <div className="flex items-center space-x-4">
-        <Link to="/">Home</Link>
-        <Link to="/trending">Trending</Link>
+    <nav className="flex items-center justify-between space-x-4 border-b p-5 font-semibold">
+      <div className="flex space-x-6 items-center justify-between ml-4">
+        <Link to="/">
+          <h1 className="text-xl font-bold">Cryptobull</h1>
+        </Link>
+        <div className="hidden md:flex items-center space-x-4">
+          <Link to="/">Home</Link>
+          <Link to="/trending">Trending</Link>
+        </div>
       </div>
       <div className="hidden md:flex items-center space-x-4">
         <div>
@@ -82,7 +84,10 @@ const Navbar = () => {
             <Link to="/">Home</Link>
           </li>
           <li className="border-b py-6">
-            <Link to="/">Account</Link>
+            <Link to="/trending">Trending</Link>
+          </li>
+          <li className="border-b py-6">
+            <Link to="/account">Account</Link>
           </li>
           <li className="border-b py-6">
             <ThemeToggle />

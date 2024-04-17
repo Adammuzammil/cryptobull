@@ -47,7 +47,9 @@ const CoinItem = ({ coin }) => {
 
   return (
     <tr className="h-[80px] border-b overflow-hidden">
-      <td onClick={saveCoin}>{isSaved ? <AiFillStar /> : <AiOutlineStar />}</td>
+      <td onClick={saveCoin}>
+        {isSaved ? <AiFillStar color="orange" /> : <AiOutlineStar />}
+      </td>
       <td>{coin?.rank}</td>
       <td>
         <Link to={`/coin/${coin?.uuid}`}>
